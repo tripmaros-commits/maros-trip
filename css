@@ -667,7 +667,11 @@ footer small {
   color: #444;
   font-size: 10px;
 }
-
+.logo-top {
+  width: 90px;
+  height: auto;
+  margin-bottom: 25px;
+}
 </style>
 
 
