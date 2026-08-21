@@ -173,82 +173,254 @@
     ========================= */
 
     .destinations {
-      padding: 100px 30px;
-      background: #101510;
-    }
+  position: relative;
+  padding: 120px 30px;
+  background: #101510;
+  overflow: hidden;
+}
 
-    .destination-grid {
-      max-width: 1100px;
-      margin: auto;
+/* dekorasi cahaya lembut */
+.destinations::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  top: -220px;
+  left: -180px;
+  background: rgba(169, 195, 142, 0.08);
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
 
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+.section-title {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
 
-      gap: 20px;
-    }
+.section-title p {
+  margin-bottom: 12px;
+  color: #a9c38e;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
 
-    .destination-card {
-      min-height: 430px;
+.section-title h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1;
+  font-weight: 900;
+}
 
-      display: flex;
-      align-items: flex-end;
+.section-title span {
+  color: #a9c38e;
+}
 
-      padding: 30px;
+/* GRID */
 
-      position: relative;
+.destination-grid {
+  position: relative;
+  z-index: 2;
 
-      background-size: cover;
-      background-position: center;
+  max-width: 1150px;
+  margin: auto;
 
-      overflow: hidden;
-    }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
 
-    .destination-card::before {
-      content: "";
+/* CARD */
 
-      position: absolute;
-      inset: 0;
+.destination-card {
+  min-height: 480px;
 
-      background:
-        linear-gradient(
-          transparent 30%,
-          rgba(0,0,0,0.9)
-        );
-    }
+  position: relative;
 
-    .destination-card > div {
-      position: relative;
-      z-index: 2;
-    }
+  display: flex;
+  align-items: flex-end;
 
-    .destination-card small {
-      color: #b7c99f;
-    }
+  padding: 32px;
 
-    .destination-card h3 {
-      font-size: 25px;
-      margin: 10px 0;
-    }
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
 
-    .destination-card p {
-      color: #ccc;
-      font-size: 13px;
-    }
+  background-size: cover;
+  background-position: center;
 
-    .bantimurung {
-      background-image:
-        url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=85");
-    }
+  overflow: hidden;
 
-    .rammang {
-      background-image:
-        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85");
-    }
+  transition:
+    transform 0.5s ease,
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
 
-    .leangleang {
-      background-image:
-        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85");
-    }
+/* overlay */
+
+.destination-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.92) 0%,
+      rgba(0,0,0,0.55) 45%,
+      rgba(0,0,0,0.05) 100%
+    );
+
+  transition: 0.5s ease;
+}
+
+/* efek saat hover */
+
+.destination-card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(169,195,142,0.65);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.45);
+}
+
+.destination-card:hover::before {
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.95) 0%,
+      rgba(0,0,0,0.45) 55%,
+      rgba(0,0,0,0.05) 100%
+    );
+}
+
+/* isi kartu */
+
+.destination-card > div {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.destination-card small {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  color: #a9c38e;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.destination-card h3 {
+  margin: 5px 0 12px;
+
+  color: #fff;
+
+  font-size: 27px;
+  line-height: 1;
+
+  letter-spacing: 1px;
+}
+
+.destination-card p {
+  margin: 0;
+
+  max-width: 300px;
+
+  color: #d0d0d0;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* garis kecil dekoratif */
+
+.destination-card > div::before {
+  content: "";
+
+  display: block;
+
+  width: 35px;
+  height: 2px;
+
+  margin-bottom: 15px;
+
+  background: #a9c38e;
+
+  transition: width 0.4s ease;
+}
+
+.destination-card:hover > div::before {
+  width: 70px;
+}
+
+/* gambar */
+
+.bantimurung {
+  background-image:
+    url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=90");
+}
+
+.rammang {
+  background-image:
+    url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=90");
+}
+
+.leangleang {
+  background-image:
+    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=90");
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .destinations {
+    padding: 90px 20px;
+  }
+
+  .destination-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .destination-card {
+    min-height: 420px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .destinations {
+    padding: 75px 15px;
+  }
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  .destination-card {
+    min-height: 390px;
+    padding: 25px;
+  }
+
+  .destination-card h3 {
+    font-size: 23px;
+  }
+
+}
 
     /* =========================
        PACKAGES
