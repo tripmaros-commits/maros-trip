@@ -1,10 +1,10 @@
 <div class="hero" id="home">
-  <nav class="navbar">
-
+ <nav class="navbar">
   <a href="#home">HOME</a>
-  <a href="#destinations" onclick="document.getElementById('destinations').scrollIntoView(); return false;">DESTINASI</a>
+  <a href="#destinations">DESTINASI</a>
   <a href="#packages">PAKET</a>
   <a href="#contact">KONTAK</a>
+</nav>
 
 </nav><style>
 .navbar {
@@ -706,5 +706,24 @@ footer small {
 }
 
 </style>
+<script>
+document.querySelectorAll('.navbar a').forEach(function(link) {
+  link.addEventListener('click', function(event) {
+    const targetId = this.getAttribute('href');
 
+    if (targetId && targetId.startsWith('#')) {
+      event.preventDefault();
+
+      const target = document.querySelector(targetId);
+
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+  });
+});
+</script>
 
