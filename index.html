@@ -4,7 +4,180 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maros Trip — Adventure & Explore</title>
+/* =========================
+   TRANSPORTASI
+========================= */
 
+.transportasi {
+  position: relative;
+  padding: 110px 30px;
+  background: #0e130f;
+  overflow: hidden;
+}
+
+.transportasi::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  left: -220px;
+  top: 80px;
+  background: rgba(169, 195, 142, 0.07);
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.transportasi .section-title,
+.transportasi-intro,
+.transportasi-grid,
+.transportasi-booking {
+  position: relative;
+  z-index: 2;
+}
+
+.transportasi-intro {
+  max-width: 600px;
+  margin: -25px auto 50px;
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.transportasi-grid {
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.transportasi-card {
+  position: relative;
+
+  padding: 30px;
+
+  background: #151b16;
+
+  border: 1px solid #293229;
+
+  transition: 0.35s ease;
+}
+
+.transportasi-card:hover {
+  transform: translateY(-7px);
+
+  border-color: #879b78;
+
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+
+.transportasi-number {
+  color: #a9c38e;
+
+  font-size: 10px;
+  font-weight: bold;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 18px;
+}
+
+.transportasi-card h3 {
+  margin: 0 0 12px;
+
+  color: #fff;
+
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.transportasi-card p {
+  min-height: 45px;
+
+  margin: 0 0 22px;
+
+  color: #888;
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.transportasi-card strong {
+  display: block;
+
+  color: #c7d5b3;
+
+  font-size: 15px;
+}
+
+.transportasi-card small {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #666;
+
+  font-size: 10px;
+}
+
+.featured-transport {
+  background: #1d281e;
+  border-color: #8da078;
+}
+
+.transportasi-booking {
+  max-width: 600px;
+
+  margin: 55px auto 0;
+
+  text-align: center;
+}
+
+.transportasi-booking p {
+  color: #999;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.transportasi-booking button {
+  margin-top: 0;
+
+  padding: 15px 28px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .transportasi {
+    padding: 90px 20px;
+  }
+
+  .transportasi-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  .transportasi {
+    padding: 75px 15px;
+  }
+
+  .transportasi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .transportasi-card {
+    padding: 25px;
+  }
+
+}
   <style>
     * {
       box-sizing: border-box;
@@ -1244,7 +1417,7 @@ footer small {
 
   <div class="why-grid">
 
-    <div class="why-card">
+    <div class="why-card" onclick="document.getElementById('transportasi').scrollIntoView({behavior:'smooth'})">
       <div class="icon">🚐</div>
       <h3>TRANSPORTASI</h3>
       <p>
@@ -1279,6 +1452,95 @@ footer small {
         alam dengan cara yang berbeda.
       </p>
     </div>
+
+  </div>
+
+</section>
+  <!-- =========================
+     TRANSPORTASI
+========================= -->
+
+<section class="transportasi" id="transportasi">
+
+  <div class="section-title">
+    <p>MAROS TRIP PARTNER</p>
+    <h2>CHOOSE YOUR <span>RIDE</span></h2>
+  </div>
+
+  <p class="transportasi-intro">
+    Pilih kendaraan yang sesuai dengan kebutuhan perjalananmu.
+    Ketersediaan dan harga dapat dikonfirmasi langsung dengan partner kami.
+  </p>
+
+  <div class="transportasi-grid">
+
+    <div class="transportasi-card">
+      <div class="transportasi-number">01</div>
+      <h3>AVANZA</h3>
+      <p>Nyaman untuk perjalanan keluarga dan small group.</p>
+      <strong>Mulai Rp375K</strong>
+      <small>• Lepas kunci</small>
+    </div>
+
+    <div class="transportasi-card">
+      <div class="transportasi-number">02</div>
+      <h3>XPANDER</h3>
+      <p>MPV nyaman untuk menjelajah berbagai destinasi Maros.</p>
+      <strong>Mulai Rp400K</strong>
+      <small>• Lepas kunci</small>
+    </div>
+
+    <div class="transportasi-card">
+      <div class="transportasi-number">03</div>
+      <h3>INNOVA REBORN</h3>
+      <p>Pilihan nyaman untuk perjalanan bersama keluarga atau group.</p>
+      <strong>Mulai Rp500K</strong>
+      <small>• Lepas kunci</small>
+    </div>
+
+    <div class="transportasi-card">
+      <div class="transportasi-number">04</div>
+      <h3>FORTUNER</h3>
+      <p>SUV premium untuk perjalanan yang lebih nyaman dan berkelas.</p>
+      <strong>Mulai Rp1,125JT</strong>
+      <small>• Lepas kunci</small>
+    </div>
+
+    <div class="transportasi-card">
+      <div class="transportasi-number">05</div>
+      <h3>PAJERO SPORT</h3>
+      <p>SUV premium untuk perjalanan adventure dan perjalanan jauh.</p>
+      <strong>Mulai Rp1,15JT</strong>
+      <small>• Lepas kunci</small>
+    </div>
+
+    <div class="transportasi-card featured-transport">
+
+      <div class="transportasi-number">06</div>
+
+      <h3>HIACE PREMIO</h3>
+
+      <p>
+        Pilihan ideal untuk group dengan kapasitas penumpang lebih besar.
+      </p>
+
+      <strong>Mulai Rp1,2JT</strong>
+
+      <small>• Dengan driver</small>
+
+    </div>
+
+  </div>
+
+  <div class="transportasi-booking">
+
+    <p>
+      Butuh kendaraan untuk perjalananmu?
+    </p>
+
+    <button onclick="window.open('https://wa.me/6282396595959', '_blank')">
+      TANYAKAN UNIT
+    </button>
 
   </div>
 
