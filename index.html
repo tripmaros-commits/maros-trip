@@ -21,113 +21,71 @@
       background: #101510;
       color: white;
     }
-    /* =========================
-   WHY MAROS TRIP
-========================= */
+ /* =========================
+    WHY MAROS TRIP
+ ========================= */
 
-.why-us {
-  padding: 100px 30px;
-  background: #121813;
-}
+ .why-us {
+   padding: 100px 30px;
+   background: #121813;
+ }
 
-.why-grid {
-  max-width: 1000px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-}
+ .why-grid {
+   max-width: 1000px;
+   margin: auto;
 
-.why-card {
-  position: relative;
-  padding: 30px 20px;
-  background: #0d110e;
-  border: 1px solid #252e27;
-  overflow: hidden;
-  transition: 0.35s ease;
-}
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
 
-.why-card::before,
-.why-card::after {
-  content: "";
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  border: 1px solid rgba(169, 195, 142, 0.25);
-  transition: 0.4s ease;
-}
+   gap: 15px;
+ }
 
-.why-card::before {
-  top: 10px;
-  right: 10px;
-}
+ .why-card {
+   padding: 30px 20px;
 
-.why-card::after {
-  bottom: 10px;
-  left: 10px;
-}
+   background: #0d110e;
 
-.why-card:hover {
-  transform: translateY(-6px);
-  border-color: #879b78;
-}
+   border: 1px solid #252e27;
 
-.why-card:hover::before {
-  width: 55px;
-  height: 55px;
-  border-color: rgba(169, 195, 142, 0.55);
-}
+   transition: 0.3s ease;
+ }
 
-.why-card:hover::after {
-  width: 55px;
-  height: 55px;
-  border-color: rgba(169, 195, 142, 0.35);
-}
+ .why-card:hover {
+   transform: translateY(-6px);
+   border-color: #879b78;
+ }
 
-.why-card .icon {
-  position: relative;
-  z-index: 2;
-  font-size: 35px;
-  line-height: 1;
-  margin-bottom: 20px;
-}
+ .why-card .icon {
+   font-size: 35px;
+   margin-bottom: 20px;
+ }
 
-.why-card h3 {
-  position: relative;
-  z-index: 2;
-  margin: 0 0 12px;
-  font-size: 13px;
-  letter-spacing: 1px;
-}
+ .why-card h3 {
+   font-size: 13px;
+   letter-spacing: 1px;
+ }
 
-.why-card p {
-  position: relative;
-  z-index: 2;
-  margin: 0;
-  color: #888;
-  font-size: 12px;
-  line-height: 1.7;
-}
+ .why-card p {
+   color: #888;
+   font-size: 12px;
+   line-height: 1.7;
+ }
 
-@media (max-width: 800px) {
-  .why-us {
-    padding: 90px 20px;
-  }
+ @media (max-width: 800px) {
 
-  .why-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
+   .why-grid {
+     grid-template-columns: 1fr 1fr;
+   }
 
-@media (max-width: 500px) {
-  .why-us {
-    padding: 75px 15px;
-  }
+ }
 
-  .why-grid {
-    grid-template-columns: 1fr;
-  }
-}
+ @media (max-width: 500px) {
+
+   .why-grid {
+     grid-template-columns: 1fr;
+   }
+
+ }
 
     /* =========================
        NAVBAR
