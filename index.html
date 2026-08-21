@@ -1,0 +1,667 @@
+<div class="hero">
+
+  <div class="hero-content">
+
+    <p class="small-title">MAROS TRIP • ADVENTURE • EXPLORE</p>
+
+    <h1>
+      EXPLORE<br>
+      <span>MAROS</span>
+    </h1>
+
+    <p class="description">
+      Jelajahi alam liar, pegunungan, karst,
+      dan tempat-tempat tersembunyi di Maros.
+    </p>
+
+    <button onclick="window.open('https://wa.me/6281228899046', '_blank')">
+      BOOKING SEKARANG
+    </button>
+
+  </div>
+
+</div>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101510;
+  color: white;
+}
+
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 40px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.85),
+      rgba(0,0,0,0.35)
+    ),
+    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=85");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.small-title {
+  color: #b7c99f;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+h1 {
+  font-size: clamp(60px, 10vw, 120px);
+  line-height: 0.85;
+  margin: 20px 0;
+  font-weight: 900;
+}
+
+h1 span {
+  color: #a9c38e;
+}
+
+.description {
+  max-width: 500px;
+  color: #ddd;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+button {
+  margin-top: 25px;
+
+  padding: 16px 28px;
+
+  border: none;
+
+  background: #c7d5b3;
+  color: #111;
+
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  background: white;
+}
+
+</style><section class="destinations">
+
+  <div class="section-title">
+    <p>DISCOVER MAROS</p>
+    <h2>CHOOSE YOUR <span>ADVENTURE</span></h2>
+  </div>
+
+  <div class="destination-grid">
+
+    <div class="destination-card bantimurung">
+      <div>
+        <small>01</small>
+        <h3>BANTIMURUNG</h3>
+        <p>Air terjun, alam hijau dan petualangan.</p>
+      </div>
+    </div>
+
+    <div class="destination-card rammang">
+      <div>
+        <small>02</small>
+        <h3>RAMMANG-RAMMANG</h3>
+        <p>Menjelajahi gugusan karst yang spektakuler.</p>
+      </div>
+    </div>
+
+    <div class="destination-card leangleang">
+      <div>
+        <small>03</small>
+        <h3>LEANG-LEANG</h3>
+        <p>Menelusuri sejarah dan jejak manusia purba.</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+.destinations {
+  padding: 100px 30px;
+  background: #101510;
+}
+
+.section-title {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.section-title p {
+  color: #a9c38e;
+  font-size: 11px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+.section-title h2 {
+  font-size: 42px;
+  margin: 15px 0;
+}
+
+.section-title span {
+  color: #a9c38e;
+}
+
+.destination-grid {
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.destination-card {
+  min-height: 430px;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 30px;
+
+  position: relative;
+
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+}
+
+.destination-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      transparent 30%,
+      rgba(0,0,0,0.9)
+    );
+}
+
+.destination-card > div {
+  position: relative;
+  z-index: 2;
+}
+
+.destination-card small {
+  color: #b7c99f;
+}
+
+.destination-card h3 {
+  font-size: 25px;
+  margin: 10px 0;
+}
+
+.destination-card p {
+  color: #ccc;
+  font-size: 13px;
+}
+
+.bantimurung {
+  background-image:
+    url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=85");
+}
+
+.rammang {
+  background-image:
+    url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85");
+}
+
+.leangleang {
+  background-image:
+    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85");
+}
+
+@media (max-width: 800px) {
+
+  .destination-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+</style>
+<section class="packages">
+
+  <div class="section-title">
+    <p>MAROS TRIP EXPERIENCE</p>
+    <h2>CHOOSE YOUR <span>TRIP</span></h2>
+  </div>
+
+  <div class="package-grid">
+
+    <div class="package-card">
+      <span>01</span>
+      <h3>DAY TRIP</h3>
+      <p>
+        Jelajahi destinasi terbaik Maros
+        dalam satu hari penuh petualangan.
+      </p>
+
+      <ul>
+        <li>✓ Transportasi</li>
+        <li>✓ Tiket destinasi</li>
+        <li>✓ Local guide</li>
+        <li>✓ Dokumentasi</li>
+      </ul>
+
+      <button onclick="window.open('https://wa.me/6281228899046', '_blank')">
+        BOOKING
+      </button>
+    </div>
+
+
+    <div class="package-card featured">
+
+      <div class="popular">MOST POPULAR</div>
+
+      <span>02</span>
+
+      <h3>2D1N ADVENTURE</h3>
+
+      <p>
+        Nikmati Maros lebih lama dengan
+        pengalaman menginap dan eksplorasi.
+      </p>
+
+      <ul>
+        <li>✓ Transportasi</li>
+        <li>✓ Penginapan</li>
+        <li>✓ Makan</li>
+        <li>✓ Local guide</li>
+        <li>✓ Dokumentasi</li>
+      </ul>
+
+      <button onclick="window.open('https://wa.me/6281228899046', '_blank')">
+        BOOKING
+      </button>
+
+    </div>
+
+
+    <div class="package-card">
+
+      <span>03</span>
+
+      <h3>PRIVATE TRIP</h3>
+
+      <p>
+        Tentukan sendiri tanggal,
+        destinasi dan konsep perjalananmu.
+      </p>
+
+      <ul>
+        <li>✓ Custom itinerary</li>
+        <li>✓ Pilihan kendaraan</li>
+        <li>✓ Penginapan</li>
+        <li>✓ Dokumentasi</li>
+      </ul>
+
+      <button onclick="window.open('https://wa.me/6281228899046', '_blank')">
+        KONSULTASI
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<style>
+
+.packages {
+  padding: 100px 30px;
+  background: #0b0e0c;
+}
+
+.package-grid {
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.package-card {
+  position: relative;
+
+  padding: 35px;
+
+  background: #151b16;
+
+  border: 1px solid #293229;
+}
+
+.package-card.featured {
+  background: #1d281e;
+  border-color: #8da078;
+}
+
+.package-card > span {
+  color: #9eb58b;
+  font-size: 12px;
+}
+
+.package-card h3 {
+  font-size: 27px;
+  margin: 15px 0;
+}
+
+.package-card p {
+  color: #999;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.package-card ul {
+  list-style: none;
+  padding: 0;
+
+  margin: 25px 0;
+}
+
+.package-card li {
+  font-size: 12px;
+  color: #ccc;
+  margin: 10px 0;
+}
+
+.package-card button {
+  width: 100%;
+}
+
+.popular {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  padding: 8px 12px;
+
+  background: #c7d5b3;
+  color: #111;
+
+  font-size: 9px;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+
+  .package-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+</style>
+<section class="why-us">
+
+  <div class="section-title">
+    <p>WHY MAROS TRIP?</p>
+    <h2>MORE THAN JUST A <span>TRIP</span></h2>
+  </div>
+
+  <div class="why-grid">
+
+    <div class="why-card">
+      <div class="icon">🚐</div>
+      <h3>TRANSPORTASI</h3>
+      <p>
+        Perjalanan lebih nyaman dengan
+        kendaraan yang disesuaikan dengan kebutuhan trip.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <div class="icon">🧭</div>
+      <h3>LOCAL GUIDE</h3>
+      <p>
+        Teman perjalanan yang mengenal
+        destinasi dan medan Maros.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <div class="icon">📸</div>
+      <h3>DOKUMENTASI</h3>
+      <p>
+        Abadikan momen perjalananmu
+        dengan foto dan video.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <div class="icon">🏕️</div>
+      <h3>ADVENTURE</h3>
+      <p>
+        Rasakan pengalaman menjelajah
+        alam dengan cara yang berbeda.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<style>
+
+.why-us {
+  padding: 100px 30px;
+  background: #121813;
+}
+
+.why-grid {
+  max-width: 1000px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+.why-card {
+  padding: 30px 20px;
+
+  background: #0d110e;
+
+  border: 1px solid #252e27;
+
+  transition: 0.3s;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  border-color: #879b78;
+}
+
+.icon {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.why-card h3 {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.why-card p {
+  color: #888;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 800px) {
+
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+</style>
+<section class="contact">
+
+  <div class="contact-box">
+
+    <p>READY FOR ADVENTURE?</p>
+
+    <h2>
+      LET'S EXPLORE<br>
+      <span>MAROS TOGETHER.</span>
+    </h2>
+
+    <p class="contact-text">
+      Punya pertanyaan tentang paket,
+      jadwal atau private trip?
+      Hubungi kami langsung.
+    </p>
+
+    <button onclick="window.open('https://wa.me/6281228899046', '_blank')">
+      CHAT WHATSAPP
+    </button>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <h3>MAROS TRIP</h3>
+
+  <p>
+    Explore Maros. Create Memories.
+  </p>
+
+  <small>
+    © 2026 Maros Trip. All Rights Reserved.
+  </small>
+
+</footer>
+
+
+<style>
+
+.contact {
+  padding: 120px 30px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.75),
+      rgba(0,0,0,0.85)
+    ),
+    url("https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=2000&q=85");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-box {
+  max-width: 700px;
+  margin: auto;
+}
+
+.contact-box > p:first-child {
+  color: #a9c38e;
+  font-size: 11px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+.contact h2 {
+  font-size: clamp(40px, 7vw, 75px);
+  line-height: 0.95;
+  margin: 20px 0;
+}
+
+.contact h2 span {
+  color: #a9c38e;
+}
+
+.contact-text {
+  max-width: 500px;
+  margin: 25px auto;
+  color: #bbb;
+  line-height: 1.7;
+}
+
+.contact button {
+  margin-top: 10px;
+}
+
+footer {
+  padding: 50px 20px;
+
+  text-align: center;
+
+  background: #080a09;
+}
+
+footer h3 {
+  letter-spacing: 4px;
+}
+
+footer p {
+  color: #777;
+  font-size: 12px;
+}
+
+footer small {
+  display: block;
+  margin-top: 25px;
+  color: #444;
+  font-size: 10px;
+}
+
+</style>
+
+
