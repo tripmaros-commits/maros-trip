@@ -774,87 +774,211 @@
 
  }
 
-    /* =========================
-       CONTACT
-    ========================= */
+   /* =========================
+   CONTACT — PREMIUM
+========================= */
 
-    .contact {
-      padding: 120px 30px;
+.contact {
+  position: relative;
+  padding: 130px 30px;
 
-      text-align: center;
+  text-align: center;
 
-      background:
-        linear-gradient(
-          rgba(0,0,0,0.75),
-          rgba(0,0,0,0.85)
-        ),
-        url("https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=2000&q=85");
+  background:
+    linear-gradient(
+      rgba(5,8,6,0.82),
+      rgba(5,8,6,0.92)
+    ),
+    url("https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=2000&q=85");
 
-      background-size: cover;
-      background-position: center;
-    }
+  background-size: cover;
+  background-position: center;
 
-    .contact-box {
-      max-width: 700px;
-      margin: auto;
-    }
+  overflow: hidden;
+}
 
-    .contact-box > p:first-child {
-      color: #a9c38e;
-      font-size: 11px;
-      letter-spacing: 4px;
-      font-weight: bold;
-    }
+.contact::before {
+  content: "";
 
-    .contact h2 {
-      font-size: clamp(40px, 7vw, 75px);
-      line-height: 0.95;
-      margin: 20px 0;
-    }
+  position: absolute;
 
-    .contact h2 span {
-      color: #a9c38e;
-    }
+  width: 400px;
+  height: 400px;
 
-    .contact-text {
-      max-width: 500px;
-      margin: 25px auto;
-      color: #bbb;
-      line-height: 1.7;
-    }
+  left: 50%;
+  top: -250px;
 
-    .contact button {
-      margin-top: 10px;
-    }
+  transform: translateX(-50%);
 
-    /* =========================
-       FOOTER
-    ========================= */
+  background: rgba(169,195,142,0.10);
 
-    footer {
-      padding: 50px 20px;
+  border-radius: 50%;
 
-      text-align: center;
+  filter: blur(80px);
 
-      background: #080a09;
-    }
+  pointer-events: none;
+}
 
-    .logo-footer {
-      width: 70px;
-      height: auto;
-    }
+.contact-box {
+  position: relative;
+  z-index: 2;
 
-    footer p {
-      color: #777;
-      font-size: 12px;
-    }
+  max-width: 720px;
+  margin: auto;
+}
 
-    footer small {
-      display: block;
-      margin-top: 25px;
-      color: #444;
-      font-size: 10px;
-    }
+.contact-box > p:first-child {
+  margin-bottom: 20px;
+
+  color: #a9c38e;
+
+  font-size: 11px;
+  font-weight: bold;
+
+  letter-spacing: 5px;
+}
+
+.contact h2 {
+  margin: 20px 0;
+
+  color: #fff;
+
+  font-size: clamp(42px, 7vw, 78px);
+
+  line-height: 0.95;
+
+  font-weight: 900;
+
+  letter-spacing: -1px;
+}
+
+.contact h2 span {
+  color: #a9c38e;
+}
+
+.contact-text {
+  max-width: 500px;
+
+  margin: 28px auto;
+
+  color: #aaa;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.contact button {
+  margin-top: 12px;
+
+  padding: 17px 30px;
+
+  background: #c7d5b3;
+  color: #111;
+
+  border: none;
+
+  font-size: 11px;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: 0.35s ease;
+}
+
+.contact button:hover {
+  transform: translateY(-4px);
+
+  background: #fff;
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.35);
+}
+
+
+/* =========================
+   FOOTER — PREMIUM
+========================= */
+
+footer {
+  position: relative;
+
+  padding: 60px 20px 35px;
+
+  text-align: center;
+
+  background: #080a09;
+
+  border-top: 1px solid #1c241e;
+}
+
+.logo-footer {
+  width: 75px;
+
+  height: auto;
+
+  margin-bottom: 18px;
+
+  opacity: 0.95;
+}
+
+footer p {
+  margin: 5px 0;
+
+  color: #777;
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
+}
+
+footer small {
+  display: block;
+
+  margin-top: 25px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #171c18;
+
+  color: #444;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================
+   CONTACT + FOOTER MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .contact {
+    padding: 100px 20px;
+  }
+
+  .contact h2 {
+    font-size: 42px;
+  }
+
+  .contact-text {
+    font-size: 13px;
+  }
+
+  .contact button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  footer {
+    padding: 50px 20px 30px;
+  }
+
+}
 
     /* =========================
        MOBILE
