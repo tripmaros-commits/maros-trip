@@ -1046,71 +1046,154 @@
        WHY MAROS TRIP
   ========================= -->
 
-  <section class="why-us">
+ .why-us {
+  padding: 100px 30px;
+  background: #121813;
+}
 
-    <div class="section-title">
-      <p>WHY MAROS TRIP?</p>
-      <h2>MORE THAN JUST A <span>TRIP</span></h2>
-    </div>
+.why-grid {
+  max-width: 1000px;
+  margin: auto;
 
-    <div class="why-grid">
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 
-      <div class="why-card">
-        <div class="icon">🚐</div>
-        <h3>TRANSPORTASI</h3>
-        <p>
-          Perjalanan lebih nyaman dengan
-          kendaraan yang disesuaikan dengan kebutuhan trip.
-        </p>
-      </div>
-
-      <div class="why-card">
-        <div class="icon">🧭</div>
-        <h3>LOCAL GUIDE</h3>
-        <p>
-          Teman perjalanan yang mengenal
-          destinasi dan medan Maros.
-        </p>
-      </div>
-
-      <div class="why-card">
-        <div class="icon">📸</div>
-        <h3>DOKUMENTASI</h3>
-        <p>
-          Abadikan momen perjalananmu
-          dengan foto dan video.
-        </p>
-      </div>
-
-      <div class="why-card">
-        <div class="icon">🏕️</div>
-        <h3>ADVENTURE</h3>
-        <p>
-          Rasakan pengalaman menjelajah
-          alam dengan cara yang berbeda.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-.why-card .icon {
-  font-size: 35px;
-  line-height: 1;
-  margin-bottom: 20px;
-  display: block;
+  gap: 15px;
 }
 
 .why-card {
+  position: relative;
+
   padding: 30px 20px;
+
+  background: #0d110e;
+
+  border: 1px solid #252e27;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
 }
+
+/* kotak dekorasi */
+
+.why-card::before,
+.why-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 35px;
+  height: 35px;
+
+  border: 1px solid rgba(169,195,142,0.25);
+
+  transition: 0.4s ease;
+}
+
+.why-card::before {
+  top: 10px;
+  right: 10px;
+}
+
+.why-card::after {
+  bottom: 10px;
+  left: 10px;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #879b78;
+
+  background: #111711;
+}
+
+.why-card:hover::before {
+  width: 55px;
+  height: 55px;
+
+  border-color: rgba(169,195,142,0.55);
+}
+
+.why-card:hover::after {
+  width: 55px;
+  height: 55px;
+
+  border-color: rgba(169,195,142,0.35);
+}
+
+/* ikon */
+
+.why-card .icon {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+
+  font-size: 35px;
+  line-height: 1;
+
+  margin-bottom: 20px;
+}
+
+/* judul */
 
 .why-card h3 {
+  position: relative;
+  z-index: 2;
+
   margin: 0 0 12px;
+
+  color: #fff;
+
+  font-size: 13px;
+  letter-spacing: 1px;
 }
 
+/* deskripsi */
+
 .why-card p {
+  position: relative;
+  z-index: 2;
+
   margin: 0;
+
+  color: #888;
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .why-us {
+    padding: 90px 20px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .why-us {
+    padding: 75px 15px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
 }
 
   <!-- =========================
