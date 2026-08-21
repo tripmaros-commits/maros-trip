@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tripmaros-commits.github.io/maros-trip/sitemap.xml
